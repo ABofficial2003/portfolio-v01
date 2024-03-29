@@ -88,10 +88,30 @@ navAnime();
 function pageAnime() {
   let tl = gsap.timeline();
 
-  tl.from("#right h1", {
+  tl.from("#left h1", {
     y: 40,
     opacity: 0,
     delay: 3.3,
+    duration: 0.6,
+    stagger: 0.2,
+  });
+  gsap.from("#right img", {
+    opacity: 0,
+    delay: 3.3,
+    duration: 0.6,
+    stagger: 0.2,
+  });
+  gsap.from("#left h3", {
+    y: 40,
+    opacity: 0,
+    delay: 3.1,
+    duration: 0.6,
+    stagger: 0.2,
+  });
+  gsap.from("#left p", {
+    y: 40,
+    opacity: 0,
+    delay: 3.5,
     duration: 0.6,
     stagger: 0.2,
   });
@@ -99,33 +119,33 @@ function pageAnime() {
 pageAnime();
 
 // function aboutAnime() {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".big-txt h1",
-      start:"top center",
-      end:"bottom center",
-      // markers: true,
-    },
-  });
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".big-txt h1",
+    start: "top center",
+    end: "bottom center",
+    // markers: true,
+  },
+});
 
-  tl.from(".big-txt h1", {
-    y: 30,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.1,
-  });
+tl.from(".big-txt h1", {
+  y: 30,
+  opacity: 0,
+  duration: 0.5,
+  stagger: 0.1,
+});
 
-  // tl.from(".small-txt h2", {
-  //   y: 40,
-  //   opacity: 0,
-  //   duration: 0.6,
-  //   stagger: 0.1,
-  // });
+// tl.from(".small-txt h2", {
+//   y: 40,
+//   opacity: 0,
+//   duration: 0.6,
+//   stagger: 0.1,
+// });
 
-  // tl.from(".buttons button", {
-  //   duration: 0.3,
-  //   opacity: 0,
-  //   scale: 0,
-  // });
+// tl.from(".buttons button", {
+//   duration: 0.3,
+//   opacity: 0,
+//   scale: 0,
+// });
 // }
 // aboutAnime();
