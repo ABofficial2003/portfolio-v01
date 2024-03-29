@@ -184,6 +184,7 @@ body {
 
 #center #right img {
   width: 500px;
+  opacity: 1;
 }
 
 #left h3 {
