@@ -1,44 +1,3 @@
-function locoScroll() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
-  });
-
-  locoScroll.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-
-    pinType: document.querySelector("#main").style.transform
-      ? "transform"
-      : "fixed",
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-  ScrollTrigger.refresh();
-
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
-  });
-}
-locoScroll();
-
 function loaderAnime() {
   var tl = gsap.timeline();
 
@@ -72,80 +31,88 @@ function navAnime() {
   gsap.from("#left img", {
     x: -40,
     opacity: 0,
-    delay: 3.3,
+    delay: 3.5,
     duration: 0.7,
   });
 
   gsap.from("#navbar", {
     y: -40,
     opacity: 0,
-    delay: 3.3,
-    duration: 0.5,
+    delay: 3.5,
+    duration: 0.7,
   });
 }
 navAnime();
 
 function pageAnime() {
-  let tl = gsap.timeline();
+  gsap.from("#left", {
+    y: 50,
+    opacity: 0,
+    delay: 3.6,
+    duration: 0.7,
+    stagger: 0.2,
+  });
 
-  tl.from("#left h1", {
-    y: 40,
+  gsap.from("#right", {
     opacity: 0,
-    delay: 3.3,
-    duration: 0.6,
-    stagger: 0.2,
-  });
-  gsap.from("#right img", {
-    opacity: 0,
-    delay: 3.3,
-    duration: 0.6,
-    stagger: 0.2,
-  });
-  gsap.from("#left h3", {
-    y: 40,
-    opacity: 0,
-    delay: 3.1,
-    duration: 0.6,
-    stagger: 0.2,
-  });
-  gsap.from("#left p", {
-    y: 40,
-    opacity: 0,
-    delay: 3.5,
-    duration: 0.6,
-    stagger: 0.2,
+    delay: 3.6,
+    duration: 0.7,
   });
 }
 pageAnime();
 
-// function aboutAnime() {
-let tl = gsap.timeline({
+gsap.registerPlugin(ScrollTrigger);
+
+const splitTypes = document.querySelectorAll(".reveal-type");
+
+splitTypes.forEach((char, i) => {
+  const text = new SplitType(char, { types: "chars" });
+
+  gsap.from(text.chars, {
+    scrollTrigger: {
+      trigger: char,
+      start: "top 90%",
+      end: "end 50%",
+      scrub: true,
+    },
+    opacity: 0.3,
+    stagger: 0.1,
+  });
+});
+
+gsap.from(".reveal-box", {
   scrollTrigger: {
-    trigger: ".big-txt h1",
-    start: "top center",
-    end: "bottom center",
-    // markers: true,
+    trigger: ".reveal-box",
+    start: "top 100%",
+    end: "bottom 30%",
+    scrub: true,
   },
-});
-
-tl.from(".big-txt h1", {
-  y: 30,
+  y: 100,
   opacity: 0,
-  duration: 0.5,
-  stagger: 0.1,
+  stagger: 0.2,
 });
 
-// tl.from(".small-txt h2", {
-//   y: 40,
-//   opacity: 0,
-//   duration: 0.6,
-//   stagger: 0.1,
-// });
+gsap.from(".reveal-social", {
+  scrollTrigger: {
+    trigger: ".reveal-social",
+    start: "top 90%",
+    end: "bottom 10%",
+    scrub: true,
+  },
+  y: 100,
+  opacity: 0.8,
+  stagger: 0.2,
+});
 
-// tl.from(".buttons button", {
-//   duration: 0.3,
-//   opacity: 0,
-//   scale: 0,
-// });
-// }
-// aboutAnime();
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
