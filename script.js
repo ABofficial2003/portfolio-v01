@@ -1,3 +1,31 @@
+document.querySelectorAll('a[href^="#"]').forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const id = el.getAttribute("href")?.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+const lenis = new Lenis({
+  duration: 1.5,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
 function loaderAnime() {
   var tl = gsap.timeline();
 
@@ -58,6 +86,12 @@ function pageAnime() {
     delay: 3.6,
     duration: 0.7,
   });
+
+  gsap.from(".scroll-down", {
+    opacity: 0,
+    delay: 4.4,
+    duration: 3,
+  });
 }
 pageAnime();
 
@@ -71,13 +105,52 @@ splitTypes.forEach((char, i) => {
   gsap.from(text.chars, {
     scrollTrigger: {
       trigger: char,
-      start: "top 90%",
+      start: "top 95%",
       end: "end 50%",
       scrub: true,
+      markers: false,
     },
     opacity: 0.3,
     stagger: 0.1,
   });
+});
+
+gsap.from(".reveal-skill", {
+  scrollTrigger: {
+    trigger: ".reveal-skill",
+    start: "top 95%",
+    end: "end 20%",
+    scrub: true,
+    markers: false,
+  },
+  y: 40,
+  opacity: 0,
+  stagger: 0.2,
+});
+
+gsap.from(".reveal-contact", {
+  scrollTrigger: {
+    trigger: ".reveal-contact",
+    start: "top 75%",
+    end: "end 30%",
+    scrub: true,
+    markers: false,
+  },
+  y: 30,
+  opacity: 0,
+  stagger: 0.1,
+});
+
+gsap.to(".scroll", {
+  scrollTrigger: {
+    trigger: ".scroll",
+    start: "top 70%",
+    end: "bottom 30%",
+    scrub: true,
+  },
+  y: 20,
+  opacity: 0,
+  stagger: 0.2,
 });
 
 gsap.from(".reveal-box", {
@@ -103,16 +176,3 @@ gsap.from(".reveal-social", {
   opacity: 0.8,
   stagger: 0.2,
 });
-
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
