@@ -517,7 +517,6 @@ body {
   height: 500px;
   width: 50%;
   padding: 0 25px;
-  /* background-color: red; */
 }
 
 #left-part > h1 {
@@ -549,7 +548,6 @@ body {
 #right-part-pg4 {
   height: 600px;
   width: 50%;
-  /* background-color: rgb(136, 0, 255); */
 }
 
 #right-part-pg4 > .part1 h3 {
@@ -707,7 +705,6 @@ body {
 #socials-con > img:hover {
   opacity: 60%;
   transform: translateY(-20px);
-
   cursor: pointer;
 }
 
