@@ -1,0 +1,308 @@
+@media (max-width: 600px) {
+  
+    /* -----Loader----- */
+
+    #loader > h2{
+        font-size: 1.8rem;
+    }
+  
+    /* -----------------NAVBAR-------------- */
+  #page1 {
+    padding: 0;
+    height: 65vh;
+    border-bottom: 1px solid rgba(228, 228, 228, 0.667);
+  }
+
+  #navbar {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(205, 205, 205, 0.721);
+  }
+
+  #nav-logo h4 {
+    font-size: 16px;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    padding-right: 15px;
+  }
+
+  /* ----------icon-------- */
+
+  .fixed-icon {
+    height: 40px;
+    width: 40px;
+    padding: 2.5vw;
+    bottom: 25px;
+    right: 15px;
+  }
+
+  .fixed-icon i {
+    font-size: 20px;
+  }
+
+  /* ----------------------PAGE1-------------------------- */
+
+  #center {
+    margin-top: 50px;
+    height: 50vh;
+    padding: 0;
+    border: none;
+  }
+
+  #left {
+    padding: 0;
+    margin-left: -20px;
+    width: 100%;
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  #left h3 {
+    font-size: 23px;
+  }
+
+  #left h1 {
+    font-size: 45px;
+  }
+
+  #left p {
+    font-size: 15px;
+  }
+
+  .buttons {
+  }
+
+  .buttons button {
+    padding: 4px 10px;
+  }
+
+  .buttons .github-btn a {
+    font-size: 16px;
+  }
+
+  .buttons .resume-btn a {
+    font-size: 16px;
+  }
+
+  #btm {
+    display: none;
+  }
+
+  /* --------------ABOUT------------- */
+
+  #about {
+    width: 100%;
+  }
+
+  #about .about-heading {
+    color: #e8630a;
+    font-size: 1.8rem;
+    width: 60%;
+    padding-top: 7vw;
+    position: absolute;
+    left: 20%;
+    border: none;
+    text-align: center;
+    font-family: rejoy;
+  }
+
+  #about-info {
+    height: 50%;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+  }
+
+  #about-info p {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 90px;
+  }
+
+  #skills {
+    width: 100%;
+    height: 50%;
+  }
+
+  #skills h1 {
+    position: ;
+    top: 40%;
+    left: 20%;
+    color: #e8630a;
+    font-size: 1.8rem;
+    width: 60%;
+    border: none;
+    position: absolute;
+    text-align: center;
+  }
+
+  #skill-box {
+    position: absolute;
+    left: 13%;
+    padding: 50px 10px;
+    gap: 30px;
+  }
+
+  #skill-box img {
+    height: 60px;
+    width: 60px;
+  }
+
+  /* --------------PROJECTS------------- */
+
+  #projects {
+    padding-top: 10vw;
+    border-top: 1px solid rgba(212, 212, 212, 0.788);
+    min-height: 150vh;
+  }
+
+  #projects > .head {
+    width: 100%;
+    margin: 0;
+  }
+
+  #projects > .head h1 {
+    border: none;
+    font-size: 1.8rem;
+  }
+
+  #slides {
+    margin-top: 30px;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 700%;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .slide .tag {
+    margin: 5px 0;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    border: 1px solid rgba(192, 192, 192, 0.811);
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  }
+
+  .slide h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* -------------Contact---------------*/
+
+  #page4 {
+    height: 90vh;
+    padding-bottom: 20vw;
+  }
+
+  #pg4-con {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #left-part {
+    width: 100%;
+    height: 40%;
+  }
+
+  #left-part > h1 {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  #left-part > .pg4-para {
+    margin-top: 25px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left-part > .pg4-para h2:nth-of-type(2) {
+    width: 100%;
+    margin-top: -20px;
+    font-size: 2rem;
+  }
+  #left-part > .pg4-para h4 {
+    font-size: 1.2rem;
+  }
+
+  #right-part-pg4 {
+    width: 100%;
+    height: 60%;
+    padding: 0 25px;
+  }
+
+  #right-part-pg4 .part2 {
+    justify-content: flex-end;
+  }
+
+  #right-part-pg4 > .part2 a {
+    position: absolute;
+    bottom: 7vw;
+    left: 12vw;
+  }
+
+  /* -------------Social----------------- */
+
+  #socials {
+    height: 32vh;
+    border-radius: ;
+  }
+
+  #upper-footer {
+    align-items: flex-start;
+    padding-top: 10vw;
+  }
+
+  #upper-footer > #left-part-footer {
+    width: 100%;
+  }
+
+  #upper-footer > #left-part-footer h1 {
+    display: none;
+  }
+
+  #upper-footer > #left-part-footer button {
+    display: none;
+  }
+
+  #upper-footer > #left-part-footer .quote > h2 {
+    font-size: 18px;
+  }
+
+  #upper-footer > #right-part {
+    display: none;
+  }
+
+  #socials-con {
+    bottom: 10%;
+    border: none;
+  }
+
+  #lower-footer h4 {
+    font-size: 12px;
+  }
+}
