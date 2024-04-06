@@ -20,7 +20,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #2f2f2f;
+  background-color: black;
 }
 
 *::selection {
@@ -31,7 +31,7 @@ body {
 #loader {
   height: 100vh;
   width: 100%;
-  background-color: #2f2f2f;
+  background-color: black;
   z-index: 999;
   position: absolute;
   display: flex;
@@ -49,8 +49,8 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #2f2f2f;
-  padding: 0 30px;
+  background-color: black;
+  padding: 1vw 5vw;
 }
 
 .fixed-icon {
@@ -65,13 +65,13 @@ body {
   z-index: 998;
   padding: 1.5vw;
   border-radius: 50%;
-  background: #000;
+  background: #e8630a;
   transition: all 0.3s;
 }
 
 .fixed-icon:hover {
   cursor: pointer;
-  background-color: #e8630a;
+  background-color: grey ;
 }
 
 .fixed-icon a {
@@ -94,7 +94,7 @@ body {
 
 #nav-logo {
   display: flex;
-  padding: 1vw 2vw;
+  padding: 1vw 0;
   justify-content: center;
   align-items: center;
 }
@@ -162,7 +162,6 @@ body {
   color: rgb(0, 0, 0);
   border: 1px solid black;
   margin-left: 25px;
-  margin-right: 20px;
   border-radius: 25px;
   padding: 7px 15px;
   cursor: pointer;
@@ -174,7 +173,7 @@ body {
 }
 
 .nav-btn:hover {
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   background-color: black;
   border: 1px solid #ffffffba;
   color: white;
@@ -201,7 +200,7 @@ body {
 }
 
 #center #left {
-  padding: 0 10vw;
+  padding: 0 7vw;
   height: inherit;
   width: 100%;
   display: flex;
@@ -246,7 +245,7 @@ body {
 }
 
 .buttons .resume-btn:hover {
-  background-color: #2f2f2f;
+  background-color: black;
   border: 1px solid #ffffffba;
   color: white;
 }
@@ -285,6 +284,16 @@ body {
 }
 
 .buttons .github-btn a:hover {
+  color: white;
+}
+
+.buttons .github-btn a i {
+  color: #000;
+  font-size: 2rem;
+  transition: ease 0.3s;
+}
+
+.buttons .github-btn a i:hover {
   color: white;
 }
 
@@ -331,7 +340,7 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: #2f2f2f;
+  padding: 2vw 5vw;
 }
 
 #about .about-heading {
@@ -339,82 +348,94 @@ body {
   font-size: 3.5vw;
   padding: 1vw 2vw;
   width: fit-content;
-  position: absolute;
-  top: 2%;
-  right: 6%;
   border-bottom: 1px solid rgba(218, 218, 218, 0.865);
   border-radius: 10px;
   font-family: rejoy;
 }
 
+#about-box {
+  display: flex;
+  gap: 2vw;
+}
+
 #about-info {
-  height: 50%;
+  margin-top: 2vw;
+  width: 65%;
+  height: 30vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 2%;
-  z-index: 5;
-  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 #about-info p {
   font-size: 2vw;
-  letter-spacing: -0.1px;
-  width: 80%;
+  /* letter-spacing: -0.1px; */
   color: rgb(250, 229, 229);
-  text-align: center;
   opacity: 80%;
+  text-align: left;
 }
 
-#skills {
-  width: 60%;
-  height: 100%;
+#more-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1.2px solid white;
+  width: 35%;
+  padding: 0 2vw;
 }
 
-#skills h1 {
-  color: #e8630a;
-  font-size: 3.5vw;
-  padding: 1vw 2vw;
-  width: fit-content;
-  position: absolute;
-  top: 20%;
-  left: 12.5%;
-  border-bottom: 1px solid rgba(218, 218, 218, 0.865);
-  border-radius: 10px;
-  font-family: rejoy;
+#more-info > .head {
+  color: #fff;
 }
 
-#skill-box {
-  position: absolute;
-  border-left: 1.5px solid white;
-  border-right: 1.5px solid white;
-  border-bottom: 1.5px solid white;
+#more-info > .body {
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+#more-info > .body > li {
+  color: rgba(223, 219, 219, 0.888);
+}
+
+#tech-stack {
+  padding: 2vw;
+  width: 52vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
   border-radius: 20px;
-  bottom: 10%;
-  left: 5%;
-  width: fit-content;
-  padding: 5vw 2vw;
-  display: grid;
-  gap: 50px;
-  grid-template-columns: 70px 70px 70px;
-  grid-template-rows: 70px 70px 70px;
+  background-color: rgba(255, 255, 255, 0.269);
 }
 
-#skill-box img {
-  width: 70px;
-  height: 70px;
-  border-radius: 20%;
+#tech-stack > h1 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+#tech-stack .stack-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5vw;
+}
+
+#tech-stack .stack-box .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  background-color: #e7e7e79b;
 }
 
 /* -----------section3--------------- */
 
 #projects {
-  height: 70vh;
+  height: 80vh;
   width: 100%;
-  background-color: #2f2f2f;
   position: relative;
 }
 
@@ -493,21 +514,19 @@ body {
 /* ----------------section4----------------- */
 
 #page4 {
-  height: 80vh;
+  height: 70vh;
   width: 100%;
-  background-color: #2f2f2f;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
 }
 
 #pg4-con {
-  height: 100%;
+  margin-top: 10vw;
+  height: 70%;
   width: 100%;
-  position: absolute;
-  margin-top: 8%;
-  z-index: 12;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -601,25 +620,57 @@ body {
   color: #000;
 }
 
+#socials-con {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 20px;
+  height: 50px;
+  width: fit-content;
+}
+
+#socials-con .social {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3e3e3ae;
+  transition: all ease 0.4s;
+}
+
+#socials-con .social img {
+  width: 30px;
+}
+
+#socials-con > .social:hover {
+  opacity: 60%;
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
 /* ----------------section5---------------- */
 
 #socials {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
-  border-top: 1px solid rgba(207, 207, 207, 0.429);
 }
 
 #upper-footer {
-  height: inherit;
+  height: 70%;
   width: 100%;
   position: relative;
-  justify-content: space-between;
   display: flex;
+  align-items: center;
 }
 
 #upper-footer > #left-part-footer {
   width: 50%;
-  padding: 0 40px;
+  padding-left: 2vw;
+  height: inherit;
 }
 
 #upper-footer > #left-part-footer > .quote {
@@ -646,13 +697,13 @@ body {
 
 #upper-footer > #left-part-footer > button:hover {
   color: white;
-  background-color: #2f2f2f;
+  background-color: black;
 }
 
 #upper-footer > #right-part {
-  width: 30%;
-  margin-right: 1.5vw;
-  margin-bottom: 10vw;
+  width: 50%;
+  height: 80%;
+  padding-right: 1.5vw;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -681,43 +732,18 @@ body {
   margin-bottom: 3vw;
 }
 
-#socials-con {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: absolute;
-  bottom: 40%;
-  left: 50%;
-  padding: 30px 20px;
-  transform: translate(-50%, 0);
-  height: 50px;
-  border-bottom: 1px solid white;
-  border-radius: 10px;
-}
-
-#socials-con > img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  transition: all 0.4s;
-}
-
-#socials-con > img:hover {
-  opacity: 60%;
-  transform: translateY(-20px);
-  cursor: pointer;
-}
-
 #lower-footer {
+  height: 30%;
   padding: 1.5vw 0;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#lower-footer > h3 {
+  color: #e8630a;
+  text-decoration: overline;
 }
 
 /* responsiveness */
@@ -988,6 +1014,7 @@ body {
 
   #socials {
     height: 32vh;
+    background-color: #393e46;
   }
 
   #upper-footer {

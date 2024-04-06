@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/media-query.css">
+    <link rel="stylesheet" href="/media-query.css" />
   </head>
 
   <body>
@@ -41,7 +41,6 @@
             <h4><a href="#projects">Projects</a></h4>
             <h4><a href="#socials">Socials</a></h4>
             <button class="nav-btn"><a href="#page4">Get in touch</a></button>
-            
           </div>
           <button class="menu"><i class="ri-menu-3-line hamburger"></i></button>
         </div>
@@ -58,8 +57,8 @@
             <div class="buttons">
               <button class="github-btn">
                 <a target="_blank" href="https://github.com/ABofficial2003"
-                  >Github</a
-                >
+                  ><i class="ri-github-fill"></i
+                ></a>
               </button>
               <button class="resume-btn">
                 <a target="_blank" href="./assets/resume.pdf">Resume</a>
@@ -77,46 +76,55 @@
       <!-- /* ----------------section2---------------- */ -->
 
       <section id="about">
-        <h1 class="about-heading">About me</h1>
-        <div id="about-info">
-          <p class="reveal-type">
-            A Passionate Full Stack Web Developer <br />with a keen eye for
-            UI/UX design and a flair <br />
-            for creativity. Proficient in leveraging <br />cutting-edge
-            technologies to craft intuitive and visually appealing digital
-            experiences.
-          </p>
+        <h1 class="about-heading">ABOUT ME</h1>
+        <div id="about-box">
+          <div id="about-info">
+            <p class="reveal-type">
+              My name is <span>Adarsh Biswas</span>, I'm a 20-year-old
+              passionate Full-Stack Web Developer from Bhopal, India.
+            </p>
+            <p class="reveal-type">
+              I have a keen eye for UI/UX design and a flair for creativity.
+              <br />
+              I'm proficient in leveraging cutting edge technologies to craft
+              intuitive and visually appealing digital experiences.
+            </p>
+          </div>
+
+          <div id="more-info">
+            <h1 class="head">More about me -- [Favourite]</h1>
+            <ul class="body">
+              <li>music band -- BMTH</li>
+              <li>game -- Roblox</li>
+              <li>singer -- Charlie Puth</li>
+              <li>web series -- Dark</li>
+              <li>movie -- Interstellar</li>
+              <li>language -- JavaScript</li>
+              <li>car -- Toyota Supra GR-J29/A90</li>
+            </ul>
+          </div>
         </div>
 
-        <div id="skills">
-          <h1 class="skill-headind">Skills</h1>
-          <div class="reveal-skill" id="skill-box">
-            <div class="item item1">
-              <img src="./assets/skills/react.png" alt="reactjs icon" />
+        <div id="tech-stack">
+          <h1>STACK</h1>
+          <div class="stack-box">
+            <div class="item">
+              <img src="./assets/skills/icons8-react-40.png" />
             </div>
-            <div class="item item2">
-              <img src="./assets/skills/node-js.png" alt="node js icon" />
+            <div class="item">
+              <img src="./assets/skills/icons8-express-js-50.png" />
             </div>
-            <div class="item item3">
-              <img src="./assets/skills/nextjs.png" alt="next js icon" />
+            <div class="item">
+              <img src="./assets/skills/icons8-postgres-48.png" />
             </div>
-            <div class="item item4">
-              <img src="./assets/skills/mongodb.png" alt="mongodb icon" />
+            <div class="item">
+              <img src="./assets/skills/nextjs_icon_132160.png" />
             </div>
-            <div class="item item5">
-              <img src="./assets/skills/postgresql.png" alt="postgrSQL icon" />
+            <div class="item">
+              <img src="./assets/skills/icons8-tailwind-css-48.png" />
             </div>
-            <div class="item item6">
-              <img src="./assets/skills/figma.png" alt="figma icon" />
-            </div>
-            <div class="item item7">
-              <img src="./assets/skills/html.png" alt="html icon" />
-            </div>
-            <div class="item item8">
-              <img src="./assets/skills/css.png" alt="css icon" />
-            </div>
-            <div class="item item9">
-              <img item9 src="./assets/skills/js.png" alt="" />
+            <div class="item">
+              <img src="./assets/skills/icons8-figma-48.png" />
             </div>
           </div>
         </div>
@@ -126,7 +134,7 @@
 
       <section id="projects">
         <div class="head">
-          <h1 class="pg3-works">Projects</h1>
+          <h1 class="pg3-works">PROJECTS</h1>
         </div>
 
         <div class="reveal-box" id="slides">
@@ -200,12 +208,21 @@
             </div>
           </div>
         </div>
+
+        <div id="socials-con">
+          <div class="social"><img src="./assets/social/linkedin.png" /></div>
+          <div class="social"><img src="./assets/social/facebook.png" /></div>
+          <div class="social"><img src="./assets/social/twitter.png" /></div>
+          <div class="social"><img src="./assets/social/instagram.png" /></div>
+          <div class="social"><img src="./assets/social/github.png" /></div>
+          <div class="social"><img src="./assets/social/mail.png" /></div>
+        </div>
       </section>
 
       <!-- /* ----------------section5---------------- */ -->
 
-      <section id="socials">
-        <div class="reveal-social" id="upper-footer">
+      <section class="reveal-social" id="socials">
+        <div id="upper-footer">
           <div id="left-part-footer">
             <h1>Chill, I've got you!</h1>
             <button>Follow Me</button>
@@ -215,7 +232,7 @@
                   >"Experience is the name everyone <br />
                   gives to their mistakes."</em
                 >
-                <br /><br />
+                <br />
                 – Oscar Wilde
               </h2>
             </div>
@@ -228,22 +245,9 @@
             </div>
             <span>©️ Since 2022</span>
           </div>
-          <div id="socials-con">
-            <img src="./assets/social/twitter.png" alt="twitter logo" />
-            <img src="./assets/social/facebook.png" alt="Facebook logo" />
-            <img
-              style="background: white"
-              src="./assets/social/github.png"
-              alt="github logo"
-            />
-            <img src="./assets/social/instagram.png" alt="instagram logo" />
-            <img src="./assets/social/linkedin.png" alt="linkedin logo" />
-          </div>
-          <div id="lower-footer">
-            <h4>
-              Handcrafted by Adarsh (me) ❤️ [ Full portfolio under development ]
-            </h4>
-          </div>
+        </div>
+        <div id="lower-footer">
+          <h3>-- Developed by Adarsh --</h3>
         </div>
       </section>
     </div>
