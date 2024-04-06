@@ -401,13 +401,13 @@ body {
 
 #tech-stack {
   padding: 2vw;
-  width: 52vw;
-  height: 20vh;
+  width: 51vw;
+  height: 15vh;
   display: flex;
   align-items: center;
   gap: 3vw;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.269);
+  background-color: rgba(233, 228, 228, 0.231);
 }
 
 #tech-stack > h1 {
@@ -421,14 +421,18 @@ body {
   gap: 2.5vw;
 }
 
+#tech-stack .stack-box .item img{
+  width: 40px;
+}
+
 #tech-stack .stack-box .item {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 60px;
   width: 60px;
-  border-radius: 10px;
-  background-color: #e7e7e79b;
+  border-radius: 50%;
+  background-color: #e4dddd6d;
 }
 
 /* -----------section3--------------- */
@@ -746,30 +750,31 @@ body {
   text-decoration: overline;
 }
 
-/* responsiveness */
+/* responsiveness -------------------------------------- */
 
 @media (max-width: 600px) {
   /* -----Loader----- */
 
   #loader > h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   /* -----------------NAVBAR-------------- */
   #page1 {
     padding: 0;
-    height: 65vh;
+    height: 100vh;
     border-bottom: 1px solid rgba(228, 228, 228, 0.667);
   }
 
   #navbar {
+    padding: 0 2vh;
     width: 100%;
-    height: 60px;
+    height: 10vh;
     border-bottom: 1px solid rgba(205, 205, 205, 0.721);
   }
 
   #nav-logo h4 {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   #nav-menu {
@@ -779,6 +784,10 @@ body {
   .menu {
     display: block;
     padding-right: 15px;
+  }
+
+  .menu i{
+    font-size: 2.3rem;
   }
 
   /* ----------icon-------- */
@@ -798,45 +807,46 @@ body {
   /* ----------------------PAGE1-------------------------- */
 
   #center {
-    margin-top: 50px;
-    height: 50vh;
-    padding: 0;
+    height: inherit;
+    width: 100%;
+    display: flex;
+    gap: 10vh;
+    flex-direction: column;
+    align-items: center;
     border: none;
   }
 
   #left {
-    padding: 0;
-    margin-left: -20px;
+    height: inherit;
     width: 100%;
-    display: flex;
-    gap: 1px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content:first baseline;
+    /* padding-top: -50vh; */
+   
   }
 
   #left h3 {
-    font-size: 23px;
+    font-size: 2rem;
   }
 
   #left h1 {
-    font-size: 45px;
+    font-size: 3.2rem;
   }
 
   #left p {
-    font-size: 15px;
+    font-size: 1.5rem;
+    width: auto;
   }
 
   .buttons button {
-    padding: 4px 10px;
+    /* padding: 2vw 10vw; */
   }
 
   .buttons .github-btn a {
-    font-size: 16px;
+    font-size: 2rem;
   }
 
   .buttons .resume-btn a {
-    font-size: 16px;
+    font-size: 2rem;
   }
 
   #btm {
@@ -846,63 +856,52 @@ body {
   /* --------------ABOUT------------- */
 
   #about {
+    height: 90vh;
     width: 100%;
   }
 
   #about .about-heading {
     color: #e8630a;
-    font-size: 1.8rem;
-    width: 60%;
+    font-size: 2rem;
+    width: 100%;
     padding-top: 7vw;
-    position: absolute;
-    left: 20%;
     border: none;
     text-align: center;
     font-family: rejoy;
   }
 
   #about-info {
+    margin-top: 5vh;
     height: 50%;
     display: flex;
+    flex-direction: column;
     width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 5;
+
   }
 
   #about-info p {
+    text-align: left;
+    font-size: 1.55rem;
+    margin-bottom: 3vh;
+  }
+
+  #about-box>#more-info{
+    display: none;
+  }
+
+  #tech-stack{
+    margin-top: 5vh;
     width: 100%;
-    font-size: 20px;
-    margin-bottom: 90px;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
-  #skills {
-    width: 100%;
-    height: 50%;
-  }
-
-  #skills h1 {
-    top: 40%;
-    left: 20%;
-    color: #e8630a;
-    font-size: 1.8rem;
-    width: 60%;
-    border: none;
-    position: absolute;
-    text-align: center;
-  }
-
-  #skill-box {
-    position: absolute;
-    left: 13%;
-    padding: 50px 10px;
-    gap: 30px;
-  }
-
-  #skill-box img {
-    height: 60px;
-    width: 60px;
+  #tech-stack .stack-box .item{
+    height: 50px;
+    width: 50px;
   }
 
   /* --------------PROJECTS------------- */
@@ -920,7 +919,7 @@ body {
 
   #projects > .head h1 {
     border: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   #slides {
@@ -928,7 +927,7 @@ body {
     height: 80%;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 10vh;
   }
 
   .slide {
@@ -959,13 +958,17 @@ body {
   /* -------------Contact---------------*/
 
   #page4 {
-    height: 90vh;
+    height: 100vh;
     padding-bottom: 20vw;
+    display: flex;
+    gap: 40vh;
+    flex-direction: column;
   }
 
   #pg4-con {
     flex-direction: column;
     align-items: flex-start;
+    gap: 15vh;
   }
 
   #left-part {
@@ -1006,20 +1009,24 @@ body {
 
   #right-part-pg4 > .part2 a {
     position: absolute;
-    bottom: 7vw;
+    /* bottom: 7vw; */
     left: 12vw;
+  }
+
+  #socials-con {
+    bottom: 10%;
+    border: none;
   }
 
   /* -------------Social----------------- */
 
   #socials {
-    height: 32vh;
-    background-color: #393e46;
+    height: 20vh;
+    border-top: 1px solid white;
   }
 
   #upper-footer {
     align-items: flex-start;
-    padding-top: 10vw;
   }
 
   #upper-footer > #left-part-footer {
@@ -1035,16 +1042,11 @@ body {
   }
 
   #upper-footer > #left-part-footer .quote > h2 {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 
   #upper-footer > #right-part {
     display: none;
-  }
-
-  #socials-con {
-    bottom: 10%;
-    border: none;
   }
 
   #lower-footer h4 {
