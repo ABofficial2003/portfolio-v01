@@ -71,7 +71,7 @@ body {
 
 .fixed-icon:hover {
   cursor: pointer;
-  background-color: grey ;
+  background-color: grey;
 }
 
 .fixed-icon a {
@@ -83,7 +83,7 @@ body {
 }
 
 #navbar {
-  height: 10%;
+  height: 10vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -190,24 +190,21 @@ body {
 }
 
 #center {
-  height: 75vh;
+  height: 90vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.847);
 }
 
 #center #left {
+  /* background-color: beige; */
   padding: 0 7vw;
-  height: inherit;
+  height: 75vh;
   width: 100%;
   display: flex;
   gap: 30px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.847);
 }
 
 #left h3 {
@@ -234,9 +231,9 @@ body {
 }
 
 .buttons > button {
-  padding: 8px 20px;
+  padding: 0.5em 1.5em;
   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: ease 0.3s;
 }
 
@@ -298,7 +295,7 @@ body {
 }
 
 #btm {
-  margin: 2vw;
+  margin-top: 2em;
   display: flex;
   justify-content: center;
 }
@@ -421,7 +418,7 @@ body {
   gap: 2.5vw;
 }
 
-#tech-stack .stack-box .item img{
+#tech-stack .stack-box .item img {
   width: 40px;
 }
 
@@ -481,7 +478,11 @@ body {
   perspective: 100px;
 }
 
-.slide img {
+.slide a {
+  text-decoration: none;
+}
+
+.slide .my-projects img {
   border-radius: 8px;
   height: 250px;
   width: 100%;
@@ -489,7 +490,7 @@ body {
   transition: transform 0.5s;
 }
 
-.slide img:hover {
+.slide .my-projects img:hover {
   transform: translateZ(8px);
   border-radius: 8px;
   cursor: pointer;
@@ -625,7 +626,7 @@ body {
 }
 
 #socials-con {
-  position: relative;
+  /* position: relative; */
   z-index: 10;
   display: flex;
   align-items: center;
@@ -752,7 +753,7 @@ body {
 
 /* responsiveness -------------------------------------- */
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   /* -----Loader----- */
 
   #loader > h2 {
@@ -786,7 +787,7 @@ body {
     padding-right: 15px;
   }
 
-  .menu i{
+  .menu i {
     font-size: 2.3rem;
   }
 
@@ -807,21 +808,21 @@ body {
   /* ----------------------PAGE1-------------------------- */
 
   #center {
-    height: inherit;
+    height: 90vh;
     width: 100%;
     display: flex;
     gap: 10vh;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: none;
   }
 
-  #left {
-    height: inherit;
+  #center #left {
+    height: 75vh;
     width: 100%;
-    justify-content:first baseline;
-    /* padding-top: -50vh; */
-   
+    justify-content: first baseline;
+    border: none;
   }
 
   #left h3 {
@@ -835,10 +836,6 @@ body {
   #left p {
     font-size: 1.5rem;
     width: auto;
-  }
-
-  .buttons button {
-    /* padding: 2vw 10vw; */
   }
 
   .buttons .github-btn a {
@@ -876,7 +873,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-
   }
 
   #about-info p {
@@ -885,11 +881,11 @@ body {
     margin-bottom: 3vh;
   }
 
-  #about-box>#more-info{
+  #about-box > #more-info {
     display: none;
   }
 
-  #tech-stack{
+  #tech-stack {
     margin-top: 5vh;
     width: 100%;
     height: 20%;
@@ -899,7 +895,7 @@ body {
     justify-content: center;
   }
 
-  #tech-stack .stack-box .item{
+  #tech-stack .stack-box .item {
     height: 50px;
     width: 50px;
   }
@@ -908,7 +904,7 @@ body {
 
   #projects {
     padding-top: 10vw;
-    border-top: 1px solid rgba(212, 212, 212, 0.788);
+    /* border-top: 1px solid rgba(212, 212, 212, 0.788); */
     min-height: 150vh;
   }
 
@@ -959,16 +955,15 @@ body {
 
   #page4 {
     height: 100vh;
-    padding-bottom: 20vw;
     display: flex;
-    gap: 40vh;
     flex-direction: column;
   }
 
   #pg4-con {
+    height: 70%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15vh;
+    gap: 10vh;
   }
 
   #left-part {
@@ -1014,7 +1009,6 @@ body {
   }
 
   #socials-con {
-    bottom: 10%;
     border: none;
   }
 
