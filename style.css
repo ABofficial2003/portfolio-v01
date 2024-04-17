@@ -191,11 +191,10 @@ body {
 
 #center {
   height: 90vh;
-  width: 100%;
+  width: 100%; 
 }
 
 #center #left {
-  /* background-color: beige; */
   padding: 0 7vw;
   height: 75vh;
   width: 100%;
@@ -762,7 +761,7 @@ body {
 
   /* -----------------NAVBAR-------------- */
   #page1 {
-    padding: 0;
+    padding: 0 2em;
     height: 100vh;
     border-bottom: 1px solid rgba(228, 228, 228, 0.667);
   }
@@ -808,6 +807,7 @@ body {
   /* ----------------------PAGE1-------------------------- */
 
   #center {
+    padding: 3em 0;
     height: 90vh;
     width: 100%;
     display: flex;
@@ -819,22 +819,22 @@ body {
   }
 
   #center #left {
-    height: 75vh;
+    height: inherit;
     width: 100%;
     justify-content: first baseline;
     border: none;
   }
 
   #left h3 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   #left h1 {
-    font-size: 3.2rem;
+    font-size: 3.2em;
   }
 
   #left p {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     width: auto;
   }
 
@@ -904,7 +904,7 @@ body {
 
   #projects {
     padding-top: 10vw;
-    /* border-top: 1px solid rgba(212, 212, 212, 0.788); */
+    position: relative;
     min-height: 150vh;
   }
 
@@ -916,6 +916,10 @@ body {
   #projects > .head h1 {
     border: none;
     font-size: 2rem;
+  }
+
+  #projects .reveal-box{
+    height: inherit;
   }
 
   #slides {
